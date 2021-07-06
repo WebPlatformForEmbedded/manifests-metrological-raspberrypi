@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="wpe" fetch="ssh://git@github.com/WebPlatformForEmbedded" revision="refs/heads/main"/>
+
+    <remote name="oe" fetch="git://git.openembedded.org/" revision="refs/heads/morty"/>
+    <remote name="yocto" fetch="git://git.yoctoproject.org" revision="refs/heads/morty"/>
+    <remote name="agherzan" fetch="https://github.com/agherzan" revision="refs/heads/morty"/>
+
+    <project name="poky" remote="yocto" path="src/poky" clone-depth="1"/>
+    <project name="meta-openembedded" remote="oe" path="src/meta-openembedded" clone-depth="1"/>
+    <project name="meta-raspberrypi" remote="agherzan" path="src/meta-raspberrypi" clone-depth="1"/>
+    <project name="meta-python2" remote="oe" path="src/meta-python2" clone-depth="1"/>
+
+    <project name="meta-wpe" remote="wpe" path="src/meta-wpe"/> 
+    <project name="meta-wpe-restricted" remote="wpe" path="src/meta-wpe-restricted"/>
+    <project name="meta-metrological-raspberrypi" remote="wpe" path="src/meta-metrological-raspberrypi">
+        <copyfile src="tools/setup-rpi.sh" dest="setup-rpi.sh" />
+    </project>
+
+</manifest>
