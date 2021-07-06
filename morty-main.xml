@@ -14,7 +14,7 @@
 
     <project name="meta-wpe" remote="wpe" path="src/meta-wpe"/> 
     <project name="meta-wpe-restricted" remote="wpe" path="src/meta-wpe-restricted"/>
-    <project name="meta-metrological-raspberrypi" remote="wpe" path="src/meta-metrological-raspberrypi" revision="refs/heads/development/buildscript/1">
+    <project name="meta-metrological-raspberrypi" remote="wpe" path="src/meta-metrological-raspberrypi">
         <copyfile src="tools/setup-rpi.sh" dest="setup-rpi.sh" />
     </project>
 
